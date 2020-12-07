@@ -5,6 +5,8 @@
 # Sakura
 Sakura is a C++ library for modifying maps from the game Celeste. Currently it is just experimental, however it will likely be used in further projects. Feel free to use it in any of your projects.
 
+Included with Sakura are definitions for the default entities, triggers, and effects used by the default game (check under assets for the XML files). Use them with the LoadEntityXML ( for triggers and entities) and the LoadEffectsXML (for effect style grounds).
+
 Documentation can be found here: [Sakura Documentation](https://aracitdev.github.io/Sakura/)
 
 ---
