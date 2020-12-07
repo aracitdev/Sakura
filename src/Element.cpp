@@ -11,12 +11,12 @@ Element::Element(const std::string& nm): name(nm)
 {
 }
 
-Element::Element(const std::string& nm, std::map<std::string,std::any> values): name(nm)
+Element::Element(const std::string& nm, std::map<std::string,std::variant<int32_t,bool,float,std::string>> values): name(nm)
 {
     attributes = values;
 }
 
-Element::Element(const std::string& nm, std::vector<std::pair<std::string, std::any>> values): name(nm)
+Element::Element(const std::string& nm, std::vector<std::pair<std::string, std::variant<int32_t,bool,float,std::string>>> values): name(nm)
 {
     for(uint32_t i=0; i < values.size(); i++)
         attributes[values[i].first]=values[i].second;
@@ -33,14 +33,14 @@ std::string Element::Attr(const std::string& key, std::string def)
 {
     if(!attributes.count(key))
         SetAttr(key,def);
-    return std::any_cast<std::string>(attributes[key]);
+    return std::get<std::string>(attributes[key]);
 }
 
 bool Element::AttrBool(const std::string& key, bool def)
 {
     if(!attributes.count(key))
         SetBool(key,def);
-    return std::any_cast<bool>(attributes[key]);
+    return std::get<bool>(attributes[key]);
 }
 
 float Element::AttrFloat(const std::string& key, float def)
@@ -49,10 +49,10 @@ float Element::AttrFloat(const std::string& key, float def)
         SetFloat(key,def);
     auto it=attributes.find(key);
     if(IsType<float>(it->second))
-        return std::any_cast<float>(it->second);
+        return std::get<float>(it->second);
     if(IsType<int32_t>(it->second))
-        return std::any_cast<int32_t>(it->second);
-    throw std::runtime_error("Invalid type conversion of std::any in element AttrFloat " + name +" key " +key);
+        return std::get<int32_t>(it->second);
+    throw std::runtime_error("Invalid type conversion of variant in element AttrFloat " + name +" key " +key);
 }
 
 int32_t Element::AttrInt(const std::string& key, int32_t def)
@@ -61,31 +61,31 @@ int32_t Element::AttrInt(const std::string& key, int32_t def)
         SetInt(key,def);
     auto it=attributes.find(key);
     if(IsType<int32_t>(it->second))
-        return std::any_cast<int32_t>(it->second);
+        return std::get<int32_t>(it->second);
     if(IsType<float>(it->second))
-        return std::any_cast<float>(it->second);
-    throw std::runtime_error("Invalid type conversion of std::any in element AttrInt " + name +" key " +key);
+        return std::get<float>(it->second);
+    throw std::runtime_error("Invalid type conversion of variant in element AttrInt " + name +" key " +key);
 }
 
 
 void Element::SetAttr(const std::string& key, std::string def)
 {
-    attributes[key] = std::make_any<std::string>(def);
+    attributes[key] = def;
 }
 
 void Element::SetBool(const std::string& key, bool def)
 {
-    attributes[key] = std::make_any<bool>(def);
+    attributes[key] = def;
 }
 
 void Element::SetFloat(const std::string& key, float def)
 {
-    attributes[key] = std::make_any<float>(def);
+    attributes[key] = def;
 }
 
 void Element::SetInt(const std::string& key, int32_t def)
 {
-    attributes[key] = std::make_any<int32_t>(def);
+    attributes[key] = def;
 }
 
 bool Element::HasAttr(const std::string& key)
@@ -186,7 +186,7 @@ size_t Element::InternalSearchChild(Element* toSearch)
 }
 
 
-void LoadBlacklistedElements(std::map<std::string, std::any>& out, const std::vector<std::string>& blacklist, Element* e)
+void LoadBlacklistedElements(std::map<std::string, std::variant<int32_t,bool,float,std::string>>& out, const std::vector<std::string>& blacklist, Element* e)
 {
     for(auto it = e->attributes.begin(); it != e->attributes.end(); it++)
         if(it->first.find("__") != 0 && std::find(blacklist.begin(),blacklist.end(), it->first) == std::end(blacklist))   //ignore special tags and blacklists

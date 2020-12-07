@@ -40,7 +40,7 @@ void Entity::LoadFromElement(Element* e)
     }
 
     LoadBlacklistedElements(defs, blacklistedEntityAttributes, e);
-    //we take these out of std::any because they are used often in editor
+    //we take these out of the defs because they are used often in editor
     x=e->AttrInt("x",0);
     y=e->AttrInt("y",0);
     id=e->AttrInt("id",-1);

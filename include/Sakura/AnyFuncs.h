@@ -1,12 +1,12 @@
 /**
  * @file AnyFuncs.h
- * @brief Some helpful functions for dealing with std::any
+ * @brief Some helpful functions for dealing with variants
  */
 
 #ifndef ANYFUNCS_H_INCLUDED
 #define ANYFUNCS_H_INCLUDED
-#include <any>
 #include <string>
+#include <variant>
 
 /**
   * @namespace Sakura
@@ -17,29 +17,29 @@ namespace Sakura
 
 /**
  * @tparam T Type to check against
- * @param in Any to check against
+ * @param in Variant to check against
  * @return returns true if the type of in and T are equal
  */
 template <class T>
-inline bool IsType(const std::any& in)
+inline bool IsType(const std::variant<int32_t,bool,float,std::string>& in)
 {
-    return in.type() == typeid(T);
+    return std::holds_alternative<T>(in);
 }
 
 
 /**
- * @param in The std::any to convert.
+ * @param in The variant to convert.
  * @return A string equivalent of in.
- * Converts an std::any into a string equivalent.
+ * Converts a variant into a string equivalent.
  */
-std::string ToString(const std::any& in);
+std::string ToString(const std::variant<int32_t,bool,float,std::string>& in);
 
 /**
  * @param in The string to convert
- * @return An any equivalent to the string.
+ * @return An string equivalent to in.
  * Converts a string into an std::any equivalent
  */
-std::any FromString(const std::string& in);
+std::variant<int32_t,bool,float,std::string> FromString(const std::string& in);
 
 
 }

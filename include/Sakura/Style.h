@@ -8,7 +8,6 @@
 #define STYLE_H_INCLUDED
 #include <map>
 #include <string>
-#include <any>
 #include "Element.h"
 
 namespace Sakura
@@ -57,7 +56,7 @@ public:
       */
     Element* SaveToElement(void);
 
-    std::map<std::string,std::any> defs; /**< Attributes that the parallax background has*/
+    std::map<std::string,std::variant<int32_t,bool,float,std::string>> defs; /**< Attributes that the parallax background has*/
 };
 
 
@@ -110,7 +109,7 @@ public:
     void ApplyElement(Element* e);
 
     std::string name; /**< The type of effect */
-    std::map<std::string,std::any> defs;    /**< The attributes of the effect*/
+    std::map<std::string,std::variant<int32_t,bool,float,std::string>> defs;    /**< The attributes of the effect*/
 };
 
 

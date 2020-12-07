@@ -7,7 +7,7 @@
 #include <string>
 #include <map>
 #include <vector>
-#include <any>
+#include <variant>
 
 
 /**
@@ -68,7 +68,7 @@ public:
     int32_t y; /**< Y position of the entity*/
     int32_t id;/**< Unique id of the entity, used for referencing the entity from triggers/other entities*/
     std::string name; /**<The type of entity*/
-    std::map<std::string,std::any> defs; /**< List of entity attributes*/
+    std::map<std::string,std::variant<int32_t,bool,float,std::string>> defs; /**< List of entity attributes*/
 
     std::vector<std::pair<int32_t,int32_t>> nodes; /**< A list of nodes for entities who use the nodes element. Dash blocks, moving space jam, badeline bosses, ect..*/
     bool useNodes; /**< Whether or not the entity uses nodes. Many entities don't use nodes */

@@ -16,7 +16,7 @@
 namespace Sakura
 {
 
-extern const std::map<std::string,std::any> defaultMapData; /**< The default room defs dictionary */
+extern const std::map<std::string,std::variant<int32_t,bool,float,std::string>> defaultMapData; /**< The default room defs dictionary */
 
 
 /**
@@ -76,7 +76,7 @@ public:
     Tiles bgTiles;/**< A group of tiles that make up the background*/
     ObjTiles objTiles; /**< A group of object tiles in the room*/
 
-    std::map<std::string,std::any> defs;
+    std::map<std::string,std::variant<int32_t,bool,float,std::string>> defs;
 private:
 
 };

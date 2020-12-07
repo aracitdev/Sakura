@@ -6,7 +6,7 @@
 
 #ifndef SAKURA_ELEMENT_H_INCLUDED
 #define SAKURA_ELEMENT_H_INCLUDED
-#include <any>
+#include <variant>
 #include <string>
 #include <map>
 #include <vector>
@@ -39,14 +39,14 @@ public:
   * @param attr A map to copy in to the attributes.
   * Constructs a new element with attributes.
   */
-    Element(const std::string& nm, std::map<std::string,std::any> attr);
+    Element(const std::string& nm, std::map<std::string,std::variant<int32_t,bool,float,std::string>> attr);
 
 /**
   * @param nm The name of the element.
   * @param attr A vector of key:value pairs to copy to attributes.
   * Constructs a new element with attributes.
   */
-    Element(const std::string& nm, std::vector<std::pair<std::string,std::any>> attr);
+    Element(const std::string& nm, std::vector<std::pair<std::string,std::variant<int32_t,bool,float,std::string>>> attr);
 
 /**
   * Destructor.
@@ -60,7 +60,7 @@ public:
   * @return The value of the attribute.
   * Gets the value of an attribute as a string.
   * Constructs the attribute if it doesn't already exist.
-  * @warning This can throw an exception as it is casting an std::any
+  * @warning This can throw an exception as it is casting wrong
   */
     std::string Attr(const std::string& key, std::string def="");
 
@@ -70,7 +70,7 @@ public:
   * @return The value of the attribute.
   * Gets the value of the attribute as a boolean.
   * Constructs the attribute if it doesn't already exist.
-  * @warning This can throw an exception as it is casting an std::any
+  * @warning This can throw an exception as it is casting wrong
   */
     bool AttrBool(const std::string& key, bool def=false);
 
@@ -80,7 +80,7 @@ public:
   * @return The value of the attribute.
   * Gets the value of the attribute as a float.
   * Constructs the attribute if it doesn't already exist.
-  * @warning This can throw an exception as it is casting an std::any
+  * @warning This can throw an exception as it is casting wrong
   */
     float AttrFloat(const std::string& key, float def=0.0f);
 
@@ -91,7 +91,7 @@ public:
   * @return The value of the attribute.
   * Gets the value of the attribute as a int.
   * Constructs the attribute if it doesn't already exist.
-  * @warning This can throw an exception as it is casting an std::any
+  * @warning This can throw an exception as it is casting wrong
   */
     int32_t AttrInt(const std::string& key, int32_t def=0);
 
@@ -196,7 +196,7 @@ public:
   * @warning Memory of the newElement will not be freed if this function fails.
   */
   bool ReplaceChild(Element* toReplace, Element* newElement);
-    std::map<std::string, std::any> attributes; /**< Contains all attributes stored by the element */
+    std::map<std::string, std::variant<int32_t,bool,float,std::string>> attributes; /**< Contains all attributes stored by the element */
     std::vector<Element*> children; /**< Contains all children stored by the element */
     std::string package;/**< A package name (only used if it's the top element) */
     std::string name;/**< The name of the element (the tag) */
@@ -285,7 +285,7 @@ Element* SaveListAsElement(std::vector<T*>& list, const std::string& elementName
   * Ignores attributes with keys that are in the blacklist.
   */
 
-void LoadBlacklistedElements(std::map<std::string, std::any>& out, const std::vector<std::string>& blacklist, Element* e);
+void LoadBlacklistedElements(std::map<std::string, std::variant<int32_t,bool,float,std::string>>& out, const std::vector<std::string>& blacklist, Element* e);
 
 
 }

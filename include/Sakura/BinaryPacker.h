@@ -46,7 +46,7 @@ namespace BinaryPacker
   * Uses a byte integer to identify the type of attribute
   * 0:bool 1:uint8_t 2:uint16_t 3:uint32_t 4:float 5:lookup string (integer) 6: string 7: length encoded string
   */
-    void SaveAttribute(std::ostream& out, std::map<std::string, int16_t>& reverseLookup, std::map<std::string,std::any>::iterator it, Element* e);
+    void SaveAttribute(std::ostream& out, std::map<std::string, int16_t>& reverseLookup, std::map<std::string,std::variant<int32_t,bool,float,std::string>>::iterator it, Element* e);
 
 /**
   * @param in The strema to load from.
@@ -62,7 +62,7 @@ namespace BinaryPacker
   * @return The type of the std::any as a celeste identifier.
   * Detects the type of the std::any and gets it as a celeste compatible binary identifier (see LoadAttribute)
   */
-    uint8_t GetType(std::map<std::string, std::any>::iterator it);
+    uint8_t GetType(std::map<std::string, std::variant<int32_t,bool,float,std::string>>::iterator it);
 
 
 /**
