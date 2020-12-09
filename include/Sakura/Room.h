@@ -17,7 +17,7 @@ namespace Sakura
 {
 
 extern const std::map<std::string,std::variant<int32_t,bool,float,std::string>> defaultMapData; /**< The default room defs dictionary */
-
+extern const std::vector<std::string> blacklistedRoomAttributes;
 
 /**
   * A class for a celeste room.
@@ -76,6 +76,10 @@ public:
     Tiles bgTiles;/**< A group of tiles that make up the background*/
     ObjTiles objTiles; /**< A group of object tiles in the room*/
 
+    int32_t width;
+    int32_t height;
+    int32_t x;
+    int32_t y;
     std::map<std::string,std::variant<int32_t,bool,float,std::string>> defs;
 private:
 

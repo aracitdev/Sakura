@@ -25,10 +25,21 @@ std::variant<int32_t,bool,float,std::string> FromString(const std::string& in)
         return in == "true";
     if(in.find_first_not_of("0123456789.-") == std::string::npos)
     {
-        if(in.find('.') != std::string::npos)   //if we find a '.' its a float
-            return (float)std::stof(in);
-        else
-            return (int32_t)std::stoll(in);
+        size_t hyphenPos = in.find_last_of("-");
+        if( hyphenPos == std::string::npos || hyphenPos == 0)
+        {
+            try
+            {
+                if(in.find('.') != std::string::npos)   //if we find a '.' its a float
+                    return (float)std::stof(in);
+                else
+                    return (int32_t)std::stoll(in);
+            }
+            catch(...)
+            {
+                return in;
+            }
+        }
     }
     return in;
 }

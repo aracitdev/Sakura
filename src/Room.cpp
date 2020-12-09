@@ -2,13 +2,13 @@
 
 namespace Sakura
 {
-
+const std::vector<std::string> blacklistedRoomAttributes = {"width","height","x","y"};
 const std::map<std::string,std::variant<int32_t,bool,float,std::string>> defaultMapData =
 {
-    {"x", (int32_t)(0)},
+/*    {"x", (int32_t)(0)},
     {"y", (int32_t)(0)},
     {"width", (int32_t)(320)},
-    {"height", (int32_t)(180)},
+    {"height", (int32_t)(180)},*/
     {"name", "lvl_1"},
     {"c", (int32_t)0},
     {"musicLayer1", true},
@@ -39,6 +39,8 @@ Room::Room(Element* e)
 Room::Room(const Vector2<size_t>& sz)
 {
     Resize(sz);
+    x=0;
+    y=0;
 }
 
 
@@ -49,8 +51,8 @@ void Room::Resize(const Vector2<size_t> &sz)
 
 void Room::Resize(size_t w, size_t h)
 {
-    defs["width"]=(int32_t)(w);
-    defs["height"]=(int32_t)(h);
+    width=w;
+    height=h;
     int32_t nw = ceil(w/8);
     int32_t nh = ceil(h/8);
     bgTiles.Resize(nw,nh);
@@ -61,6 +63,10 @@ void Room::Resize(size_t w, size_t h)
 Element* Room::SaveToElement(void)
 {
     Element* levelElement = new Element("level",defs);
+    levelElement->SetInt("width",width);
+    levelElement->SetInt("height",height);
+    levelElement->SetInt("x",x);
+    levelElement->SetInt("y",y);
     levelElement->children.push_back(fgTiles.SaveToElement("solids"));
     levelElement->children.push_back(bgTiles.SaveToElement("bg"));
     levelElement->children.push_back(objTiles.SaveToElement());
@@ -75,7 +81,11 @@ Element* Room::SaveToElement(void)
 
 bool Room::LoadFromElement(Element* e)
 {
-    defs=e->attributes;
+    LoadBlacklistedElements(defs,blacklistedRoomAttributes,e);
+    width = e->AttrInt("width");
+    height = e->AttrInt("height");
+    x = e->AttrInt("x");
+    y = e->AttrInt("y");
     bgTiles.LoadFromElement(e->FindChildWithName("bg"));
     fgTiles.LoadFromElement(e->FindChildWithName("solids"));
     objTiles.LoadFromElement(e->FindChildWithName("objtiles"));
@@ -84,7 +94,7 @@ bool Room::LoadFromElement(Element* e)
     LoadListFromElement(triggers, e->FindChildWithName("triggers"));
     LoadListFromElement(fgdecals, e->FindChildWithName("fgdecals"));
     LoadListFromElement(bgdecals, e->FindChildWithName("bgdecals"));
-    Resize(std::get<int32_t>(defs["width"]), std::get<int32_t>(defs["height"]));
+    Resize(width,height);
     return true;
 }
 

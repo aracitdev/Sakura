@@ -12,6 +12,7 @@
 #include <vector>
 #include <fstream>
 #include <variant>
+#include "AnyFuncs.h"
 
 namespace Sakura
 {
@@ -188,6 +189,15 @@ public:
   * Clears all children, freeing their memory.
   */
   void ClearChildren(void);
+
+/**
+  *
+  */
+  template <class T>
+  bool IsAttr(const std::string& in)
+  {
+      return (attributes.count(in) && IsType<T>(attributes[in]));
+  }
 
 /**
   * @param toReplace the child to search for and replace

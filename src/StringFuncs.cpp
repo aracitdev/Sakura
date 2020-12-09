@@ -1,4 +1,5 @@
 #include "StringFuncs.h"
+#include <iostream>
 
 namespace Sakura
 {
@@ -12,7 +13,8 @@ std::vector<std::vector<int>> SplitStringToIntArray(const std::string& subject, 
         std::vector<std::string> ints = SplitString(lines[i], elementDelimter);
         returnV[i].resize(ints.size());
         for(uint32_t j=0; j < ints.size(); j++)
-            returnV[i][j]=std::stoi(ints[j]);
+            if(!ints[j].empty())
+                returnV[i][j]=std::stoi(ints[j]);
     }
     return returnV;
 }
