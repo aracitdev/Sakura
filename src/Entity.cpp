@@ -5,7 +5,7 @@
 namespace Sakura
 {
 
-const std::vector<std::string> blacklistedEntityAttributes={"x","y","id"};
+const std::vector<std::string> blacklistedEntityAttributes={"x","y","id", "originX","originX","width","height"};
 
 Entity::Entity(const std::string& nm) : name(nm), useNodes(false)
 {
@@ -44,6 +44,15 @@ void Entity::LoadFromElement(Element* e)
     x=e->AttrInt("x",0);
     y=e->AttrInt("y",0);
     id=e->AttrInt("id",-1);
+
+    if(e->HasAttr("width"))
+        width=e->AttrInt("width");
+    if(e->HasAttr("height"))
+        height=e->AttrInt("height");
+    if(e->HasAttr("originX"))
+        originX=e->AttrInt("originX");
+    if(e->HasAttr("originY"))
+        originY=e->AttrInt("originY");
 }
 
 Element* Entity::SaveToElement(void)
@@ -65,6 +74,16 @@ Element* Entity::SaveToElement(void)
             returnV->children[i]=nodeElement;
         }
     }
+
+    if(width.has_value())
+        returnV->SetInt("width",width.value());
+    if(height.has_value())
+        returnV->SetInt("height",height.value());
+    if(originX.has_value())
+        returnV->SetInt("originX",originX.value());
+    if(originY.has_value())
+        returnV->SetInt("originY",originY.value());
+
     return returnV;
 }
 

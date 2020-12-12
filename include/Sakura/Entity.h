@@ -66,6 +66,12 @@ public:
 
     int32_t x; /**< X position of the entity*/
     int32_t y; /**< Y position of the entity*/
+
+    std::optional<int32_t> width;
+    std::optional<int32_t> height;
+    std::optional<int32_t> originX;
+    std::optional<int32_t> originY;
+
     int32_t id;/**< Unique id of the entity, used for referencing the entity from triggers/other entities*/
     std::string name; /**<The type of entity*/
     std::map<std::string,std::variant<int32_t,bool,float,std::string>> defs; /**< List of entity attributes*/
