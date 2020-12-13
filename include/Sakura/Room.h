@@ -80,6 +80,7 @@ public:
     int32_t height;
     int32_t x;
     int32_t y;
+    std::string name;
     std::map<std::string,std::variant<int32_t,bool,float,std::string>> defs;
 private:
 

@@ -2,14 +2,14 @@
 
 namespace Sakura
 {
-const std::vector<std::string> blacklistedRoomAttributes = {"width","height","x","y"};
+const std::vector<std::string> blacklistedRoomAttributes = {"width","height","x","y","name"};
 const std::map<std::string,std::variant<int32_t,bool,float,std::string>> defaultMapData =
 {
 /*    {"x", (int32_t)(0)},
     {"y", (int32_t)(0)},
     {"width", (int32_t)(320)},
     {"height", (int32_t)(180)},*/
-    {"name", "lvl_1"},
+    /*{"name", "lvl_1"},*/
     {"c", (int32_t)0},
     {"musicLayer1", true},
     {"musicLayer2", true},
@@ -41,6 +41,7 @@ Room::Room(const Vector2<size_t>& sz)
     Resize(sz);
     x=0;
     y=0;
+    name="lvl_1";
 }
 
 
@@ -67,6 +68,7 @@ Element* Room::SaveToElement(void)
     levelElement->SetInt("height",height);
     levelElement->SetInt("x",x);
     levelElement->SetInt("y",y);
+    levelElement->SetAttr("name",name);
     levelElement->children.push_back(fgTiles.SaveToElement("solids"));
     levelElement->children.push_back(bgTiles.SaveToElement("bg"));
     levelElement->children.push_back(objTiles.SaveToElement());
@@ -86,6 +88,7 @@ bool Room::LoadFromElement(Element* e)
     height = e->AttrInt("height");
     x = e->AttrInt("x");
     y = e->AttrInt("y");
+    name = e->Attr("name");
     bgTiles.LoadFromElement(e->FindChildWithName("bg"));
     fgTiles.LoadFromElement(e->FindChildWithName("solids"));
     objTiles.LoadFromElement(e->FindChildWithName("objtiles"));
