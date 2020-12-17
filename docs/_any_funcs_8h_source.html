@@ -91,32 +91,32 @@ $(document).ready(function(){initNavTree('_any_funcs_8h_source.html',''); initRe
 <a href="_any_funcs_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#ifndef ANYFUNCS_H_INCLUDED</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#define ANYFUNCS_H_INCLUDED</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;any&gt;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;variant&gt;</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_sakura.html">Sakura</a></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="namespace_sakura.html#a89551dc3aa76c64c8d324466a675a58c">   24</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="namespace_sakura.html#a89551dc3aa76c64c8d324466a675a58c">IsType</a>(<span class="keyword">const</span> std::any&amp; in)</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="namespace_sakura.html#a3c268c726c8e6ee4b0808ac2b057803a">   24</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="namespace_sakura.html#a3c268c726c8e6ee4b0808ac2b057803a">IsType</a>(<span class="keyword">const</span> std::variant&lt;int32_t,bool,float,std::string&gt;&amp; in)</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordflow">return</span> in.type() == <span class="keyword">typeid</span>(T);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordflow">return</span> std::holds_alternative&lt;T&gt;(in);</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;std::string <a class="code" href="namespace_sakura.html#aa31585baec2f817999aa7840e5b10edc">ToString</a>(<span class="keyword">const</span> std::any&amp; in);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;std::string <a class="code" href="namespace_sakura.html#aece9897b8dc7e0410357f6c91281f462">ToString</a>(<span class="keyword">const</span> std::variant&lt;int32_t,bool,float,std::string&gt;&amp; in);</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;std::any <a class="code" href="namespace_sakura.html#aada98e0286cf2279ffbb6fc766987021">FromString</a>(<span class="keyword">const</span> std::string&amp; in);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;std::variant&lt;int32_t,bool,float,std::string&gt; <a class="code" href="namespace_sakura.html#ad300d45d57cbeb2226deb25f6bbd62ec">FromString</a>(<span class="keyword">const</span> std::string&amp; in);</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#endif // ANYFUNCS_H_INCLUDED</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="anamespace_sakura_html_aada98e0286cf2279ffbb6fc766987021"><div class="ttname"><a href="namespace_sakura.html#aada98e0286cf2279ffbb6fc766987021">Sakura::FromString</a></div><div class="ttdeci">std::any FromString(const std::string &amp;in)</div></div>
-<div class="ttc" id="anamespace_sakura_html_a89551dc3aa76c64c8d324466a675a58c"><div class="ttname"><a href="namespace_sakura.html#a89551dc3aa76c64c8d324466a675a58c">Sakura::IsType</a></div><div class="ttdeci">bool IsType(const std::any &amp;in)</div><div class="ttdef"><b>Definition:</b> AnyFuncs.h:24</div></div>
+<div class="ttc" id="anamespace_sakura_html_a3c268c726c8e6ee4b0808ac2b057803a"><div class="ttname"><a href="namespace_sakura.html#a3c268c726c8e6ee4b0808ac2b057803a">Sakura::IsType</a></div><div class="ttdeci">bool IsType(const std::variant&lt; int32_t, bool, float, std::string &gt; &amp;in)</div><div class="ttdef"><b>Definition:</b> AnyFuncs.h:24</div></div>
+<div class="ttc" id="anamespace_sakura_html_ad300d45d57cbeb2226deb25f6bbd62ec"><div class="ttname"><a href="namespace_sakura.html#ad300d45d57cbeb2226deb25f6bbd62ec">Sakura::FromString</a></div><div class="ttdeci">std::variant&lt; int32_t, bool, float, std::string &gt; FromString(const std::string &amp;in)</div></div>
+<div class="ttc" id="anamespace_sakura_html_aece9897b8dc7e0410357f6c91281f462"><div class="ttname"><a href="namespace_sakura.html#aece9897b8dc7e0410357f6c91281f462">Sakura::ToString</a></div><div class="ttdeci">std::string ToString(const std::variant&lt; int32_t, bool, float, std::string &gt; &amp;in)</div></div>
 <div class="ttc" id="anamespace_sakura_html"><div class="ttname"><a href="namespace_sakura.html">Sakura</a></div></div>
-<div class="ttc" id="anamespace_sakura_html_aa31585baec2f817999aa7840e5b10edc"><div class="ttname"><a href="namespace_sakura.html#aa31585baec2f817999aa7840e5b10edc">Sakura::ToString</a></div><div class="ttdeci">std::string ToString(const std::any &amp;in)</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

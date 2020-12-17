@@ -97,12 +97,12 @@ Functions</h2></td></tr>
 <tr class="separator:a20c5a9881e793255389238f36809a0f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae3b5c50abd49d3f5f63a6106d836185b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_sakura_1_1_binary_packer.html#ae3b5c50abd49d3f5f63a6106d836185b">Load</a> (std::istream &amp;in, std::vector&lt; std::string &gt; &amp;lookup, <a class="el" href="class_sakura_1_1_element.html">Element</a> *e)</td></tr>
 <tr class="separator:ae3b5c50abd49d3f5f63a6106d836185b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe7678546ee989c580fb6bfd17d760b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_sakura_1_1_binary_packer.html#afe7678546ee989c580fb6bfd17d760b7">SaveAttribute</a> (std::ostream &amp;out, std::map&lt; std::string, int16_t &gt; &amp;reverseLookup, std::map&lt; std::string, std::any &gt;::iterator it, <a class="el" href="class_sakura_1_1_element.html">Element</a> *e)</td></tr>
-<tr class="separator:afe7678546ee989c580fb6bfd17d760b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dbb8619d9a6380861a99ed50ac3f4e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_sakura_1_1_binary_packer.html#a9dbb8619d9a6380861a99ed50ac3f4e3">SaveAttribute</a> (std::ostream &amp;out, std::map&lt; std::string, int16_t &gt; &amp;reverseLookup, std::map&lt; std::string, std::variant&lt; int32_t, bool, float, std::string &gt;&gt;::iterator it, <a class="el" href="class_sakura_1_1_element.html">Element</a> *e)</td></tr>
+<tr class="separator:a9dbb8619d9a6380861a99ed50ac3f4e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ce2fcdd3e63efff3f27137b588daabd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_sakura_1_1_binary_packer.html#a1ce2fcdd3e63efff3f27137b588daabd">LoadAttribute</a> (std::istream &amp;in, std::vector&lt; std::string &gt; &amp;lookup, <a class="el" href="class_sakura_1_1_element.html">Element</a> *e)</td></tr>
 <tr class="separator:a1ce2fcdd3e63efff3f27137b588daabd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad4b9d67f0c23e18fa0fdd354aa45ccb5"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_sakura_1_1_binary_packer.html#ad4b9d67f0c23e18fa0fdd354aa45ccb5">GetType</a> (std::map&lt; std::string, std::any &gt;::iterator it)</td></tr>
-<tr class="separator:ad4b9d67f0c23e18fa0fdd354aa45ccb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae17f66c4b78399d94fde65b0240fd11d"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_sakura_1_1_binary_packer.html#ae17f66c4b78399d94fde65b0240fd11d">GetType</a> (std::map&lt; std::string, std::variant&lt; int32_t, bool, float, std::string &gt;&gt;::iterator it)</td></tr>
+<tr class="separator:ae17f66c4b78399d94fde65b0240fd11d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ed722ff7f5ea00744e6ea1915070937"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_sakura_1_1_element.html">Element</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_sakura_1_1_binary_packer.html#a5ed722ff7f5ea00744e6ea1915070937">Load</a> (const std::string &amp;filename)</td></tr>
 <tr class="separator:a5ed722ff7f5ea00744e6ea1915070937"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17483015f42de96925e878195ef2663b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_sakura_1_1_binary_packer.html#a17483015f42de96925e878195ef2663b">Save</a> (const std::string &amp;filename, <a class="el" href="class_sakura_1_1_element.html">Element</a> *element)</td></tr>
@@ -146,8 +146,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ad4b9d67f0c23e18fa0fdd354aa45ccb5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad4b9d67f0c23e18fa0fdd354aa45ccb5">&#9670;&nbsp;</a></span>GetType()</h2>
+<a id="ae17f66c4b78399d94fde65b0240fd11d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae17f66c4b78399d94fde65b0240fd11d">&#9670;&nbsp;</a></span>GetType()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -155,7 +155,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">uint8_t Sakura::BinaryPacker::GetType </td>
           <td>(</td>
-          <td class="paramtype">std::map&lt; std::string, std::any &gt;::iterator&#160;</td>
+          <td class="paramtype">std::map&lt; std::string, std::variant&lt; int32_t, bool, float, std::string &gt;&gt;::iterator&#160;</td>
           <td class="paramname"><em>it</em></td><td>)</td>
           <td></td>
         </tr>
@@ -358,8 +358,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="afe7678546ee989c580fb6bfd17d760b7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afe7678546ee989c580fb6bfd17d760b7">&#9670;&nbsp;</a></span>SaveAttribute()</h2>
+<a id="a9dbb8619d9a6380861a99ed50ac3f4e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9dbb8619d9a6380861a99ed50ac3f4e3">&#9670;&nbsp;</a></span>SaveAttribute()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -379,7 +379,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::map&lt; std::string, std::any &gt;::iterator&#160;</td>
+          <td class="paramtype">std::map&lt; std::string, std::variant&lt; int32_t, bool, float, std::string &gt;&gt;::iterator&#160;</td>
           <td class="paramname"><em>it</em>, </td>
         </tr>
         <tr>

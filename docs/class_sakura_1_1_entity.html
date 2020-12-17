@@ -119,15 +119,23 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:ad24ff86981b581a436122e1408dd44cb"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sakura_1_1_entity.html#ad24ff86981b581a436122e1408dd44cb">y</a></td></tr>
 <tr class="memdesc:ad24ff86981b581a436122e1408dd44cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Y position of the entity.  <a href="class_sakura_1_1_entity.html#ad24ff86981b581a436122e1408dd44cb">More...</a><br /></td></tr>
 <tr class="separator:ad24ff86981b581a436122e1408dd44cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95479b6895a449d10e677fc7763e29ed"><td class="memItemLeft" align="right" valign="top">std::optional&lt; int32_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sakura_1_1_entity.html#a95479b6895a449d10e677fc7763e29ed">width</a></td></tr>
+<tr class="separator:a95479b6895a449d10e677fc7763e29ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a728af4a94ef4bdf1e85780f95f642d29"><td class="memItemLeft" align="right" valign="top">std::optional&lt; int32_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sakura_1_1_entity.html#a728af4a94ef4bdf1e85780f95f642d29">height</a></td></tr>
+<tr class="separator:a728af4a94ef4bdf1e85780f95f642d29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90cbe1291d1d05f6afcfe298d66b5a25"><td class="memItemLeft" align="right" valign="top">std::optional&lt; int32_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sakura_1_1_entity.html#a90cbe1291d1d05f6afcfe298d66b5a25">originX</a></td></tr>
+<tr class="separator:a90cbe1291d1d05f6afcfe298d66b5a25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0229f1cfaaecf3b648517b1cbb5b62d6"><td class="memItemLeft" align="right" valign="top">std::optional&lt; int32_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sakura_1_1_entity.html#a0229f1cfaaecf3b648517b1cbb5b62d6">originY</a></td></tr>
+<tr class="separator:a0229f1cfaaecf3b648517b1cbb5b62d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6206c49d5dd6c3557df43231f458f566"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sakura_1_1_entity.html#a6206c49d5dd6c3557df43231f458f566">id</a></td></tr>
 <tr class="memdesc:a6206c49d5dd6c3557df43231f458f566"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unique id of the entity, used for referencing the entity from triggers/other entities.  <a href="class_sakura_1_1_entity.html#a6206c49d5dd6c3557df43231f458f566">More...</a><br /></td></tr>
 <tr class="separator:a6206c49d5dd6c3557df43231f458f566"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a63ed0eb9f9d4ecaa2b4131135bd25f49"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sakura_1_1_entity.html#a63ed0eb9f9d4ecaa2b4131135bd25f49">name</a></td></tr>
 <tr class="memdesc:a63ed0eb9f9d4ecaa2b4131135bd25f49"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type of entity.  <a href="class_sakura_1_1_entity.html#a63ed0eb9f9d4ecaa2b4131135bd25f49">More...</a><br /></td></tr>
 <tr class="separator:a63ed0eb9f9d4ecaa2b4131135bd25f49"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac97e218dff8e3e05d280d5493c5b5d1a"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, std::any &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sakura_1_1_entity.html#ac97e218dff8e3e05d280d5493c5b5d1a">defs</a></td></tr>
-<tr class="memdesc:ac97e218dff8e3e05d280d5493c5b5d1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of entity attributes.  <a href="class_sakura_1_1_entity.html#ac97e218dff8e3e05d280d5493c5b5d1a">More...</a><br /></td></tr>
-<tr class="separator:ac97e218dff8e3e05d280d5493c5b5d1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a55405df4ebd0eaf534f0596f49f3d9"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, std::variant&lt; int32_t, bool, float, std::string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sakura_1_1_entity.html#a4a55405df4ebd0eaf534f0596f49f3d9">defs</a></td></tr>
+<tr class="memdesc:a4a55405df4ebd0eaf534f0596f49f3d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of entity attributes.  <a href="class_sakura_1_1_entity.html#a4a55405df4ebd0eaf534f0596f49f3d9">More...</a><br /></td></tr>
+<tr class="separator:a4a55405df4ebd0eaf534f0596f49f3d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a28061d2e278afa0b8cd21471d7d82a9c"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::pair&lt; int32_t, int32_t &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sakura_1_1_entity.html#a28061d2e278afa0b8cd21471d7d82a9c">nodes</a></td></tr>
 <tr class="memdesc:a28061d2e278afa0b8cd21471d7d82a9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">A list of nodes for entities who use the nodes element.  <a href="class_sakura_1_1_entity.html#a28061d2e278afa0b8cd21471d7d82a9c">More...</a><br /></td></tr>
 <tr class="separator:a28061d2e278afa0b8cd21471d7d82a9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -267,19 +275,33 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="ac97e218dff8e3e05d280d5493c5b5d1a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac97e218dff8e3e05d280d5493c5b5d1a">&#9670;&nbsp;</a></span>defs</h2>
+<a id="a4a55405df4ebd0eaf534f0596f49f3d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a55405df4ebd0eaf534f0596f49f3d9">&#9670;&nbsp;</a></span>defs</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::map&lt;std::string,std::any&gt; Sakura::Entity::defs</td>
+          <td class="memname">std::map&lt;std::string,std::variant&lt;int32_t,bool,float,std::string&gt; &gt; Sakura::Entity::defs</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>List of entity attributes. </p>
+
+</div>
+</div>
+<a id="a728af4a94ef4bdf1e85780f95f642d29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a728af4a94ef4bdf1e85780f95f642d29">&#9670;&nbsp;</a></span>height</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt;int32_t&gt; Sakura::Entity::height</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -332,6 +354,34 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a90cbe1291d1d05f6afcfe298d66b5a25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90cbe1291d1d05f6afcfe298d66b5a25">&#9670;&nbsp;</a></span>originX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt;int32_t&gt; Sakura::Entity::originX</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0229f1cfaaecf3b648517b1cbb5b62d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0229f1cfaaecf3b648517b1cbb5b62d6">&#9670;&nbsp;</a></span>originY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt;int32_t&gt; Sakura::Entity::originY</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a74cd843b341ee4e1819b397b6bdd87a7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a74cd843b341ee4e1819b397b6bdd87a7">&#9670;&nbsp;</a></span>useNodes</h2>
 
@@ -346,6 +396,20 @@ Public Attributes</h2></td></tr>
 
 <p>Whether or not the entity uses nodes. </p>
 <p>Many entities don't use nodes </p>
+
+</div>
+</div>
+<a id="a95479b6895a449d10e677fc7763e29ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95479b6895a449d10e677fc7763e29ed">&#9670;&nbsp;</a></span>width</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt;int32_t&gt; Sakura::Entity::width</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>

@@ -92,10 +92,10 @@ $(document).ready(function(){initNavTree('_any_funcs_8h.html',''); initResizable
 </div><!--header-->
 <div class="contents">
 
-<p>Some helpful functions for dealing with std::any.  
+<p>Some helpful functions for dealing with variants.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;any&gt;</code><br />
-<code>#include &lt;string&gt;</code><br />
+<div class="textblock"><code>#include &lt;string&gt;</code><br />
+<code>#include &lt;variant&gt;</code><br />
 </div>
 <p><a href="_any_funcs_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -106,16 +106,16 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a89551dc3aa76c64c8d324466a675a58c"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
-<tr class="memitem:a89551dc3aa76c64c8d324466a675a58c"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_sakura.html#a89551dc3aa76c64c8d324466a675a58c">Sakura::IsType</a> (const std::any &amp;in)</td></tr>
-<tr class="separator:a89551dc3aa76c64c8d324466a675a58c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa31585baec2f817999aa7840e5b10edc"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_sakura.html#aa31585baec2f817999aa7840e5b10edc">Sakura::ToString</a> (const std::any &amp;in)</td></tr>
-<tr class="separator:aa31585baec2f817999aa7840e5b10edc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aada98e0286cf2279ffbb6fc766987021"><td class="memItemLeft" align="right" valign="top">std::any&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_sakura.html#aada98e0286cf2279ffbb6fc766987021">Sakura::FromString</a> (const std::string &amp;in)</td></tr>
-<tr class="separator:aada98e0286cf2279ffbb6fc766987021"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c268c726c8e6ee4b0808ac2b057803a"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a3c268c726c8e6ee4b0808ac2b057803a"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_sakura.html#a3c268c726c8e6ee4b0808ac2b057803a">Sakura::IsType</a> (const std::variant&lt; int32_t, bool, float, std::string &gt; &amp;in)</td></tr>
+<tr class="separator:a3c268c726c8e6ee4b0808ac2b057803a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aece9897b8dc7e0410357f6c91281f462"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_sakura.html#aece9897b8dc7e0410357f6c91281f462">Sakura::ToString</a> (const std::variant&lt; int32_t, bool, float, std::string &gt; &amp;in)</td></tr>
+<tr class="separator:aece9897b8dc7e0410357f6c91281f462"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad300d45d57cbeb2226deb25f6bbd62ec"><td class="memItemLeft" align="right" valign="top">std::variant&lt; int32_t, bool, float, std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_sakura.html#ad300d45d57cbeb2226deb25f6bbd62ec">Sakura::FromString</a> (const std::string &amp;in)</td></tr>
+<tr class="separator:ad300d45d57cbeb2226deb25f6bbd62ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Some helpful functions for dealing with std::any. </p>
+<div class="textblock"><p>Some helpful functions for dealing with variants. </p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

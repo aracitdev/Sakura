@@ -136,8 +136,18 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a4e7424c0b039603deea75c46eee71268"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_sakura_1_1_obj_tiles.html">ObjTiles</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sakura_1_1_room.html#a4e7424c0b039603deea75c46eee71268">objTiles</a></td></tr>
 <tr class="memdesc:a4e7424c0b039603deea75c46eee71268"><td class="mdescLeft">&#160;</td><td class="mdescRight">A group of object tiles in the room.  <a href="class_sakura_1_1_room.html#a4e7424c0b039603deea75c46eee71268">More...</a><br /></td></tr>
 <tr class="separator:a4e7424c0b039603deea75c46eee71268"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f4e058f24ddeb788c74e43ff6d22fb7"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, std::any &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sakura_1_1_room.html#a6f4e058f24ddeb788c74e43ff6d22fb7">defs</a></td></tr>
-<tr class="separator:a6f4e058f24ddeb788c74e43ff6d22fb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ef8f9a74d86285536cf3e43f6918d09"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sakura_1_1_room.html#a8ef8f9a74d86285536cf3e43f6918d09">width</a></td></tr>
+<tr class="separator:a8ef8f9a74d86285536cf3e43f6918d09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecdecede90eb59370e1fd8e1a5331e3c"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sakura_1_1_room.html#aecdecede90eb59370e1fd8e1a5331e3c">height</a></td></tr>
+<tr class="separator:aecdecede90eb59370e1fd8e1a5331e3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff3dc66d5b2530740318a099ba987802"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sakura_1_1_room.html#aff3dc66d5b2530740318a099ba987802">x</a></td></tr>
+<tr class="separator:aff3dc66d5b2530740318a099ba987802"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9071330136c16b08774dac272668e7e7"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sakura_1_1_room.html#a9071330136c16b08774dac272668e7e7">y</a></td></tr>
+<tr class="separator:a9071330136c16b08774dac272668e7e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74aad4ebad26156605a72f16fe1c9cd1"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sakura_1_1_room.html#a74aad4ebad26156605a72f16fe1c9cd1">name</a></td></tr>
+<tr class="separator:a74aad4ebad26156605a72f16fe1c9cd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a449f9927653be962d256b5ace761f4dd"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, std::variant&lt; int32_t, bool, float, std::string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sakura_1_1_room.html#a449f9927653be962d256b5ace761f4dd">defs</a></td></tr>
+<tr class="separator:a449f9927653be962d256b5ace761f4dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A class for a celeste room. </p>
@@ -328,14 +338,14 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a6f4e058f24ddeb788c74e43ff6d22fb7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6f4e058f24ddeb788c74e43ff6d22fb7">&#9670;&nbsp;</a></span>defs</h2>
+<a id="a449f9927653be962d256b5ace761f4dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a449f9927653be962d256b5ace761f4dd">&#9670;&nbsp;</a></span>defs</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::map&lt;std::string,std::any&gt; Sakura::Room::defs</td>
+          <td class="memname">std::map&lt;std::string,std::variant&lt;int32_t,bool,float,std::string&gt; &gt; Sakura::Room::defs</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -390,6 +400,34 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="aecdecede90eb59370e1fd8e1a5331e3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecdecede90eb59370e1fd8e1a5331e3c">&#9670;&nbsp;</a></span>height</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t Sakura::Room::height</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a74aad4ebad26156605a72f16fe1c9cd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74aad4ebad26156605a72f16fe1c9cd1">&#9670;&nbsp;</a></span>name</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Sakura::Room::name</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a4e7424c0b039603deea75c46eee71268"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4e7424c0b039603deea75c46eee71268">&#9670;&nbsp;</a></span>objTiles</h2>
 
@@ -419,6 +457,48 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>A list of triggers in the room. </p>
+
+</div>
+</div>
+<a id="a8ef8f9a74d86285536cf3e43f6918d09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ef8f9a74d86285536cf3e43f6918d09">&#9670;&nbsp;</a></span>width</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t Sakura::Room::width</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aff3dc66d5b2530740318a099ba987802"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff3dc66d5b2530740318a099ba987802">&#9670;&nbsp;</a></span>x</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t Sakura::Room::x</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9071330136c16b08774dac272668e7e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9071330136c16b08774dac272668e7e7">&#9670;&nbsp;</a></span>y</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t Sakura::Room::y</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>

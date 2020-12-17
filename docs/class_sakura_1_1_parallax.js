@@ -6,5 +6,5 @@ var class_sakura_1_1_parallax =
     [ "LoadFromElement", "class_sakura_1_1_parallax.html#a2f6c8c091b9597ea824f2b045feccab6", null ],
     [ "LoadFromElement", "class_sakura_1_1_parallax.html#a6c52d8bd083997057ed7bc2147c81ae3", null ],
     [ "SaveToElement", "class_sakura_1_1_parallax.html#a365ec28497f0b0a8291a05a5e538931a", null ],
-    [ "defs", "class_sakura_1_1_parallax.html#ab204d0166c15986a847a7dbd0e928b68", null ]
+    [ "defs", "class_sakura_1_1_parallax.html#aafee685a34718c89f77831d2fbb547d5", null ]
 ];

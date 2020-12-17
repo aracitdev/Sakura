@@ -1,8 +1,8 @@
 var class_sakura_1_1_element =
 [
     [ "Element", "class_sakura_1_1_element.html#aa02f67c1b63885835a80546423b8137d", null ],
-    [ "Element", "class_sakura_1_1_element.html#a799a75a020363c3daa3bc8ee42ba8055", null ],
-    [ "Element", "class_sakura_1_1_element.html#a3fcd5490e75e92e471fa39b5b3e9cd31", null ],
+    [ "Element", "class_sakura_1_1_element.html#ae46c4dea2f3f5ae1dc1f435883c5d596", null ],
+    [ "Element", "class_sakura_1_1_element.html#a9c7383cf1268cdb08bfee515f046b2d7", null ],
     [ "~Element", "class_sakura_1_1_element.html#a042ac598e79b5fbe6a389a3a85f52434", null ],
     [ "Attr", "class_sakura_1_1_element.html#ab79eb4eef549b7ca19352777e96f0ed4", null ],
     [ "AttrBool", "class_sakura_1_1_element.html#ad0bd86b4b3bdd5ba31515c31e0c55f2e", null ],
@@ -15,6 +15,7 @@ var class_sakura_1_1_element =
     [ "FindNextChild", "class_sakura_1_1_element.html#a1d337bae359f2db0450bbd6eb3cd8760", null ],
     [ "FindNextChildWithName", "class_sakura_1_1_element.html#a7287a06258c7a06e94d2b92b478765b5", null ],
     [ "HasAttr", "class_sakura_1_1_element.html#a55e5768f7d72a60fb042ca46f325af41", null ],
+    [ "IsAttr", "class_sakura_1_1_element.html#ae3b01e55b5b58ed55b8ee669dcf22b25", null ],
     [ "RemoveChild", "class_sakura_1_1_element.html#ab178c60fc7923b1b5b4c5ac8756a261a", null ],
     [ "RemoveChild", "class_sakura_1_1_element.html#a660af078dfc19cf778bf6ecd25d697f8", null ],
     [ "ReplaceChild", "class_sakura_1_1_element.html#adf0e805b46c65c118885250d228b9b91", null ],
@@ -22,7 +23,7 @@ var class_sakura_1_1_element =
     [ "SetBool", "class_sakura_1_1_element.html#ae1a59197db9fb40f5dec5c8d12b2856c", null ],
     [ "SetFloat", "class_sakura_1_1_element.html#a7532f0688691084206879ae8b3b491ce", null ],
     [ "SetInt", "class_sakura_1_1_element.html#aa0740b78c5112c74da5c1ebe082a8b33", null ],
-    [ "attributes", "class_sakura_1_1_element.html#ad9c02dca5daf7acd671ddf29806e011d", null ],
+    [ "attributes", "class_sakura_1_1_element.html#a6a6402725fa884bce20193a2a9a44184", null ],
     [ "children", "class_sakura_1_1_element.html#ac70a7aabe867e78bc9a618a325d5ff96", null ],
     [ "name", "class_sakura_1_1_element.html#ad7af3206412535cfb7c2513b89a22d62", null ],
     [ "package", "class_sakura_1_1_element.html#a456f3cb10b9bd457ce705a7d4280818e", null ]

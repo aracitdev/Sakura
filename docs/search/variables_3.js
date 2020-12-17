@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['defaultmapdata_275',['defaultMapData',['../namespace_sakura.html#a940657d51b986395a53c5fd37f58210b',1,'Sakura']]],
-  ['defs_276',['defs',['../class_sakura_1_1_entity.html#ac97e218dff8e3e05d280d5493c5b5d1a',1,'Sakura::Entity::defs()'],['../class_sakura_1_1_room.html#a6f4e058f24ddeb788c74e43ff6d22fb7',1,'Sakura::Room::defs()'],['../class_sakura_1_1_parallax.html#ab204d0166c15986a847a7dbd0e928b68',1,'Sakura::Parallax::defs()'],['../class_sakura_1_1_effect.html#ae1fb0d1d8c67023600b6edb9f57ad04e',1,'Sakura::Effect::defs()']]]
+  ['defaultmapdata_283',['defaultMapData',['../namespace_sakura.html#abe462e6122a74906634ac757ee811fec',1,'Sakura']]],
+  ['defs_284',['defs',['../class_sakura_1_1_entity.html#a4a55405df4ebd0eaf534f0596f49f3d9',1,'Sakura::Entity::defs()'],['../class_sakura_1_1_room.html#a449f9927653be962d256b5ace761f4dd',1,'Sakura::Room::defs()'],['../class_sakura_1_1_parallax.html#aafee685a34718c89f77831d2fbb547d5',1,'Sakura::Parallax::defs()'],['../class_sakura_1_1_effect.html#ac1401097bb98d924cf80c750ef80b566',1,'Sakura::Effect::defs()']]]
 ];

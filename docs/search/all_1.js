@@ -5,5 +5,6 @@ var searchData=
   ['bgparallaxes_9',['bgParallaxes',['../class_sakura_1_1_stylegrounds.html#ac14b20dd84e4fd958965c1d42e345f71',1,'Sakura::Stylegrounds']]],
   ['bgtiles_10',['bgTiles',['../class_sakura_1_1_room.html#aa9f3359a4f0f83979f0e61dc92430000',1,'Sakura::Room']]],
   ['binarypacker_2eh_11',['BinaryPacker.h',['../_binary_packer_8h.html',1,'']]],
-  ['blacklistedentityattributes_12',['blacklistedEntityAttributes',['../namespace_sakura.html#aedffe6df0e3db0c3aae48a4f853173be',1,'Sakura']]]
+  ['blacklistedentityattributes_12',['blacklistedEntityAttributes',['../namespace_sakura.html#aedffe6df0e3db0c3aae48a4f853173be',1,'Sakura']]],
+  ['blacklistedroomattributes_13',['blacklistedRoomAttributes',['../namespace_sakura.html#a9f6d9567daa3503cebc29355b93450d8',1,'Sakura']]]
 ];

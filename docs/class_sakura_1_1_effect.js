@@ -7,6 +7,6 @@ var class_sakura_1_1_effect =
     [ "LoadFromElement", "class_sakura_1_1_effect.html#a9d8dd8a129b8ecc963b7b1a0420178d0", null ],
     [ "LoadFromElement", "class_sakura_1_1_effect.html#a14eeaced98cd3550a0e6a97b2a9ca825", null ],
     [ "SaveToElement", "class_sakura_1_1_effect.html#a6bd42db5e8b5eaef839f7b518c207817", null ],
-    [ "defs", "class_sakura_1_1_effect.html#ae1fb0d1d8c67023600b6edb9f57ad04e", null ],
+    [ "defs", "class_sakura_1_1_effect.html#ac1401097bb98d924cf80c750ef80b566", null ],
     [ "name", "class_sakura_1_1_effect.html#a0a133bb94f9413cceac4d9cb75c40f9a", null ]
 ];

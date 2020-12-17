@@ -1,5 +1,16 @@
 var NAVTREEINDEX1 =
 {
+"class_sakura_1_1_vector2.html#ae16c87199902ef8d317513ee6e8eabe2":[1,0,0,11,19],
+"class_sakura_1_1_vector2.html#ae4381d3107b2b61d74fe6ac92a86008d":[1,0,0,11,16],
+"class_sakura_1_1_vector2.html#ae578798beee7e135120ad41313f0a2e8":[1,0,0,11,13],
+"class_sakura_1_1_vector2.html#ae97a4d533371d650d0fead8b53eb38c2":[1,0,0,11,17],
+"class_sakura_1_1_vector2.html#aec4756bc58ee2464e8f5db3995b0feb7":[1,0,0,11,18],
+"class_sakura_1_1_vector2.html#aec9f6a95e29b40716819222563051dc1":[1,0,0,11,12],
+"classes.html":[1,1],
+"files.html":[2,0],
+"functions.html":[1,2,0],
+"functions_func.html":[1,2,1],
+"functions_vars.html":[1,2,2],
 "index.html":[],
 "namespace_sakura.html":[1,0,0],
 "namespace_sakura.html":[0,0,0],

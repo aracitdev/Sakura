@@ -11,7 +11,6 @@ void WriteString(std::ostream& out, const std::string& v)
     while(size > 127)
     {
         Write<uint8_t>(out, (size & 127) | 128); //C# enocdes this pretty weirdly
-        size = floor(size/128);
     }
     Write<uint8_t>(out,size);
     out.write(v.c_str(),v.size());

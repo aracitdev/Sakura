@@ -49,7 +49,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_any_funcs_8h.html",
-"index.html"
+"class_sakura_1_1_vector2.html#ae16c87199902ef8d317513ee6e8eabe2"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
