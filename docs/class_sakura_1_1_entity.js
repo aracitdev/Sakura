@@ -4,7 +4,7 @@ var class_sakura_1_1_entity =
     [ "Entity", "class_sakura_1_1_entity.html#aee6e50cf26f51f1dfab7b87905a204aa", null ],
     [ "Entity", "class_sakura_1_1_entity.html#af50ff5878d9b24267da9818dc1d7628a", null ],
     [ "LoadFromElement", "class_sakura_1_1_entity.html#ade1d52f0db9ec80e548b3113259a40d8", null ],
-    [ "SaveToElement", "class_sakura_1_1_entity.html#a5c3781fc9d82368f9150f717b1019bd4", null ],
+    [ "SaveToElement", "class_sakura_1_1_entity.html#af8805b385c14d4becd812be7995a3aec", null ],
     [ "defs", "class_sakura_1_1_entity.html#a4a55405df4ebd0eaf534f0596f49f3d9", null ],
     [ "height", "class_sakura_1_1_entity.html#a728af4a94ef4bdf1e85780f95f642d29", null ],
     [ "id", "class_sakura_1_1_entity.html#a6206c49d5dd6c3557df43231f458f566", null ],

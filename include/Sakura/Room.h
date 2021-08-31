@@ -29,13 +29,13 @@ public:
 
 /**
   * @param e The element to construct from.
-  * Constructs a room from an element.
+  * @brief Constructs a room from an element.
   */
     Room(Element* e);
 
 /**
   * @param sz The size of the room to construct.
-  * Constructs a new room and resizes it to the specified size.
+  * @brief Constructs a new room and resizes it to the specified size.
   */
     Room(const Vector2<size_t>& sz = Vector2<size_t>(320,184));
 
@@ -48,19 +48,19 @@ public:
 /**
   * @param e The element to load from.
   * @return Returns true on success, false on failure.
-  * Loads the room from a level element.
+  * @brief Loads the room from a level element.
   */
     bool LoadFromElement(Element* e);
 
 /**
   * @return A level element representation of the room.
-  * Constructs a Celeste compatible level element.
+  * @brief Constructs a Celeste compatible level element.
   */
     Element* SaveToElement(void);
 
 /**
   * @param sz The new size.
-  * Resizes all the tiles to fit the new size.
+  * @brief Resizes all the tiles to fit the new size.
   */
     void Resize(const Vector2<size_t> &sz);
 
@@ -68,7 +68,7 @@ public:
 /**
   * @param w The new width.
   * @param h The new height.
-  * Resizes all the tiles to fit the new size.
+  * @brief Resizes all the tiles to fit the new size.
   */
     void Resize(size_t w, size_t h);
 

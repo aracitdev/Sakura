@@ -8,7 +8,7 @@ var class_sakura_1_1_map =
     [ "LoadFromElement", "class_sakura_1_1_map.html#adae5774599daf16feefc6cb39e3fe428", null ],
     [ "LoadFromXML", "class_sakura_1_1_map.html#a0699667aec11a4a47f6eaec387981812", null ],
     [ "SaveToBin", "class_sakura_1_1_map.html#ada3a992c7101c08a9cb3a2331e4edc8c", null ],
-    [ "SaveToElement", "class_sakura_1_1_map.html#aea07e5721a3ccb3815f019348ffc455e", null ],
+    [ "SaveToElement", "class_sakura_1_1_map.html#a2099b7db6d44d10722724d3549206011", null ],
     [ "SaveToXML", "class_sakura_1_1_map.html#ae173a56e3df00b64b669a6d58b05a0e1", null ],
     [ "filler", "class_sakura_1_1_map.html#af7f352792eeeafbdb4d250ba7e1150e0", null ],
     [ "package", "class_sakura_1_1_map.html#addda3192d44f95b52589506caf61b61f", null ],

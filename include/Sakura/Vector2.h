@@ -16,7 +16,7 @@ namespace Sakura
 /**
  * @tparam T The type to hold.
  * @brief A 2d vector for math.
- * Defines a generic 2d vector class with two components.
+ * @brief Defines a generic 2d vector class with two components.
  * Contains some math functions for it to help.
  */
 
@@ -25,7 +25,7 @@ class Vector2
 {
 public:
 /**
- * Constructs itself from x and y components.
+ * @brief Constructs itself from x and y components.
  * @param x1 The x component of the new vector.
  * @param y1 The y component of the new vector.
  */
@@ -34,14 +34,14 @@ public:
 
 /**
  * @fn Vector2()
- * Default constructor, sets to zero.
+ * @brief Default constructor, sets to zero.
  */
     Vector2();
 
 /**
  * @param in The Vector to copy.
  * @tparam R The type of the other vector
- * Constructs itself from another Vector2.
+ * @brief Constructs itself from another Vector2.
  */
     template <class R>
     Vector2(const Vector2<R>& in);
@@ -49,7 +49,7 @@ public:
 /**
  * @tparam R The type of the other vector.
  * @param in The vector to copy.
- * Copies the components from another Vector2.
+ * @brief Copies the components from another Vector2.
  * @return A reference to the constructed vector (this)
  **/
     template <class R>
@@ -58,7 +58,7 @@ public:
 /**
  * @tparam R the type of the other vector.
  * @param in The Vector to multiply by.
- * Multiplies the vector componentwise
+ * @brief Multiplies the vector componentwise
  * @return The result from the multiplication.
  */
     template <class R>
@@ -68,8 +68,8 @@ public:
 /**
  * @tparam R The type of the other vector.
  * @param in The Vector to add by.
- * Adds two vectors together.
- * \return The result from the addition.
+ * @brief Adds two vectors together.
+ * @return The result from the addition.
  */
     template <class R>
     Vector2<T> operator+(const Vector2<R>& in) const;
@@ -78,8 +78,8 @@ public:
 /**
  * @tparam R The type of the other vector.
  * @param in The Vector to divide by.
- * Divides two vectors componentwise.
- * \return The result from the division.
+ * @brief Divides two vectors componentwise.
+ * @return The result from the division.
  */
     template <class R>
     Vector2<T> operator/(const Vector2<R>& in) const;
@@ -88,7 +88,7 @@ public:
 /**
  * @tparam The type of the other vector.
  * @param in The vector to subtract by.
- * Subtracts two vectors.
+ * @brief Subtracts two vectors.
  * @return The result from the subtraction.
  */
     template <class R>
@@ -98,8 +98,8 @@ public:
 /**
   * @tparam R The type of the scalar.
   * @param in The scalar to multiply by.
-  * Multiplies the vector by a scalar.
-  * \return The result from the multiplication.
+  * @brief Multiplies the vector by a scalar.
+  * @return The result from the multiplication.
   */
     template <class R>
     Vector2<T> operator*(R in) const;
@@ -107,7 +107,7 @@ public:
 /**
  * @tparam R The type of the scalar.
  * @param in The scalar to add by.
- * Adds a scalar to each of the vectors components.
+ * @brief Adds a scalar to each of the vectors components.
  * @return The result from the addition.
  */
     template <class R>
@@ -117,7 +117,7 @@ public:
 /**
   * @tparam R The type of the scalar.
   * @param in The scalar to divide by.
-  * Divides the vector by a scalar.
+  * @brief Divides the vector by a scalar.
   * @return The result from the division.
   */
     template <class R>
@@ -126,7 +126,7 @@ public:
 /**
   * @tparam R The type of the scalar.
   * @param in The component to subtract by.
-  * Subtracts a scalar from each of the vectors component.
+  * @brief Subtracts a scalar from each of the vectors component.
   * @return The result from the subtraction.
   */
     template <class R>
@@ -135,7 +135,7 @@ public:
 /**
   * @tparam R The type of the other vector.
   * @param in The vector to compare against
-  * Compares this vector against another, checking if their equal.
+  * @brief Compares this vector against another, checking if their equal.
   * @return Returns true if the components are equal, false otherwise.
   */
     template <class R>
@@ -144,26 +144,26 @@ public:
 /**
   * @tparam R The type of the other vector.
   * @param in The component to compare against
-  * Compares this vector against another, checking if their not equal.
+  * @brief Compares this vector against another, checking if their not equal.
   * @return Returns true if the components are not equal, false otherwise.
   */
     template <class R>
     bool operator !=(const Vector2<R>& in) const;
 
 /**
-  * Normalizes the vector, making its magnitude 1.
+  * @brief Normalizes the vector, making its magnitude 1.
   * @return The normalized vector.
   */
     Vector2<T> Normalize(void);
 
 /**
-  * Returns the magnitude of the vector.
+  * @brief Returns the magnitude of the vector.
   * @return The magnitude of the vector
   */
     float Magnitude(void) const;
 
 /**
-  * Constructs a perpendicular vector.
+  * @brief Constructs a perpendicular vector.
   * @return A vector perpendicular to this one.
   */
     Vector2<T> Perp(void) const;
@@ -171,7 +171,7 @@ public:
 /**
   * @tparam R The type of the vector to dot against.
   * @param other The vector to dot product against.
-  * Gets the dot product of two vectors.
+  * @brief Gets the dot product of two vectors.
   * @return The result of the dot product
   */
     template <class R>
@@ -180,7 +180,7 @@ public:
   * @tparam R The type of the vector to cross product against.
   * @param in The vector to cross product against
   * @brief Does the cross product between two 2d vectors.
-  * In 2D this has very little mathematical meaning.
+  * @brief In 2D this has very little mathematical meaning.
   * @return The result of the cross product
   */
     template <class R>
@@ -191,7 +191,7 @@ public:
   * @tparam R The type of the scalar.
   * @param in The scalar to cross by
   * @brief the cross product by the scalar.
-  * Used in some 2d calculations.
+  * @brief Used in some 2d calculations.
   * @return The result from the cross.
   */
     template <class R>
@@ -201,7 +201,7 @@ public:
   * @tparam R The type of the vector to compare against.
   * @param in The vector to compare.
   * @brief Checks if the components are less than the others.
-  * Used to allow for this class to be used as a key in a map.
+  * @brief Used to allow for this class to be used as a key in a map.
   */
     template <class R>
     bool operator<(const Vector2<R>& in) const

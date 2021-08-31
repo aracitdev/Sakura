@@ -32,26 +32,26 @@ public:
 
 /**
   * @param nm The name of the element.
-  * Constructs a blank element with name nm.
+  * @brief Constructs a blank element with name nm.
   */
     Element(const std::string& nm = "");
 
 /**
   * @param nm The name of the element.
   * @param attr A map to copy in to the attributes.
-  * Constructs a new element with attributes.
+  * @brief Constructs a new element with attributes.
   */
     Element(const std::string& nm, std::map<std::string,std::variant<int32_t,bool,float,std::string>> attr);
 
 /**
   * @param nm The name of the element.
   * @param attr A vector of key:value pairs to copy to attributes.
-  * Constructs a new element with attributes.
+  * @brief Constructs a new element with attributes.
   */
     Element(const std::string& nm, std::vector<std::pair<std::string,std::variant<int32_t,bool,float,std::string>>> attr);
 
 /**
-  * Destructor.
+  * @brief Destructor.
   * Destroys any child elements, freeing their memory.
   */
     ~Element();
@@ -60,7 +60,7 @@ public:
   * @param key The key of the attribute.
   * @param def The default value if the attribute doesn't exist.
   * @return The value of the attribute.
-  * Gets the value of an attribute as a string.
+  * @brief Gets the value of an attribute as a string.
   * Constructs the attribute if it doesn't already exist.
   * @warning This can throw an exception as it is casting wrong
   */
@@ -70,7 +70,7 @@ public:
   * @param key The key of the attribute.
   * @param def The default value if the attribute doesn't exist.
   * @return The value of the attribute.
-  * Gets the value of the attribute as a boolean.
+  * @brief Gets the value of the attribute as a boolean.
   * Constructs the attribute if it doesn't already exist.
   * @warning This can throw an exception as it is casting wrong
   */
@@ -80,7 +80,7 @@ public:
   * @param key The key of the attribute.
   * @param def The default value if the attribute doesn't exist.
   * @return The value of the attribute.
-  * Gets the value of the attribute as a float.
+  * @brief Gets the value of the attribute as a float.
   * Constructs the attribute if it doesn't already exist.
   * @warning This can throw an exception as it is casting wrong
   */
@@ -91,7 +91,7 @@ public:
   * @param key The key of the attribute.
   * @param def The default value if the attribute doesn't exist.
   * @return The value of the attribute.
-  * Gets the value of the attribute as a int.
+  * @brief Gets the value of the attribute as a int.
   * Constructs the attribute if it doesn't already exist.
   * @warning This can throw an exception as it is casting wrong
   */
@@ -108,21 +108,21 @@ public:
 /**
   * @param key The attribute to set.
   * @param def The type to set it to
-  * Sets the value of an attribute to a string.
+  * @brief Sets the value of an attribute to a string.
   */
     void SetAttr(const std::string& key, std::string def);
 
 /**
   * @param key The attribute to set.
   * @param def The type to set it to
-  * Sets the value of an attribute to a boolean.
+  * @brief Sets the value of an attribute to a boolean.
   */
     void SetBool(const std::string& key, bool def);
 
 /**
   * @param key The attribute to set.
   * @param def The type to set it to
-  * Sets the value of an attribute to a float.
+  * @brief Sets the value of an attribute to a float.
   */
     void SetFloat(const std::string& key, float def);
 
@@ -130,21 +130,21 @@ public:
 /**
   * @param key The attribute to set.
   * @param def The type to set it to
-  * Sets the value of an attribute to an int.
+  * @brief Sets the value of an attribute to an int.
   */
     void SetInt(const std::string& key, int32_t def);
 
 /**
   * @param name The element to remove
   * @return True if the element was found/removed, false on failure.
-  * Searches children elements and removes the first found.
+  * @brief Searches children elements and removes the first found.
   */
     bool RemoveChild(const std::string& name);
 
 /**
   * @param e The element to remove
   * @return True if the element was found/removed, false on failure
-  * Removes a specific element from the children.
+  * @brief Removes a specific element from the children.
   */
     bool RemoveChild(Element* e);
 
@@ -158,13 +158,13 @@ public:
 /**
   * @param current The current element.
   * @return The element found, or null if the current was the last child.
-  * Searches for the element after the one provided.
+  * @brief Searches for the element after the one provided.
   */
     Element* FindNextChild(Element* current);
 /**
   * @param current The current element.
   * @return The element found, or null if the current was the first child.
-  * Searches for the element before the one provided.
+  * @brief Searches for the element before the one provided.
   */
   Element* FindLastChild(Element* current);
 
@@ -172,7 +172,7 @@ public:
   * @param current The current element.
   * @param name The name to look for.
   * @return The element found, or null if one could not be found.
-  * Searches for the element after the one provided with the given name.
+  * @brief Searches for the element after the one provided with the given name.
   */
   Element* FindNextChildWithName(Element* current, const std::string& name);
 
@@ -181,12 +181,12 @@ public:
   * @param current The current element.
   * @param name The name to look for.
   * @return The element found, or null if one could not be found.
-  * Searches for the element before the one provided with the given name.
+  * @brief Searches for the element before the one provided with the given name.
   */
   Element* FindLastChildWithName(Element* current, const std::string& name);
 
 /**
-  * Clears all children, freeing their memory.
+  * @brief Clears all children, freeing their memory.
   */
   void ClearChildren(void);
 
@@ -203,7 +203,7 @@ public:
   * @param toReplace the child to search for and replace
   * @param newElement the child to replace it with
   * @return Returns true if the element was found, false otherwise.
-  * Replaces out a child, freeing the old one's memeory.
+  * @brief Replaces out a child, freeing the old one's memeory.
   * @warning Memory of the newElement will not be freed if this function fails.
   */
   bool ReplaceChild(Element* toReplace, Element* newElement);
@@ -220,7 +220,7 @@ private:
 /**
   * @param list the list to load to.
   * @param in The element to load from.
-  * Loads a list of classes from an element.
+  * @brief Loads a list of classes from an element.
   * Loops through the element's children.
   * Each child is passed to the construtor of type T.
   * T is expected to have a constructor which accepts an Element*.
@@ -237,7 +237,7 @@ void LoadListFromElement(std::vector<T>& list, Element* in)
 /**
   * @param list the list to load to.
   * @param in The element to load from.
-  * Loads a list of classes from an element.
+  * @brief Loads a list of classes from an element.
   * Loops through the element's children.
   * Each child is passed to the construtor of type T.
   * T is expected to have a constructor which accepts an Element*.
@@ -257,7 +257,7 @@ void LoadListFromElement(std::vector<T*>& list, Element* in)
   * @param list The list to load from.
   * @param elementName The name of the element to construct.
   * @return The constructed element.
-  * Constructs an element from a list of T.
+  * @brief Constructs an element from a list of T.
   * T is expected to have a SaveToElement function.
   * Creates an element with the provided name, then adds children from the list.
   */
@@ -275,7 +275,7 @@ Element* SaveListAsElement(std::vector<T>& list, const std::string& elementName)
   * @param list The list to load from.
   * @param elementName The name of the element to construct.
   * @return The constructed element.
-  * Constructs an element from a list of T.
+  * @brief Constructs an element from a list of T.
   * T is expected to have a SaveToElement function.
   * Creates an element with the provided name, then adds children from the list.
   */
@@ -292,7 +292,7 @@ Element* SaveListAsElement(std::vector<T*>& list, const std::string& elementName
   * @param out The map to save to.
   * @param blacklist A list of keys to ignore when copying.
   * @param e The element to load from.
-  * Copies attributes from the element to an output map.
+  * @brief Copies attributes from the element to an output map.
   * Ignores attributes with keys that are in the blacklist.
   */
 

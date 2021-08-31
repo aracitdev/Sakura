@@ -29,7 +29,7 @@ public:
 
 /**
 * @param e The element to load from.
-* Creates a new map from an element.
+* @brief Creates a new map from an element.
 * Calls LoadFromElement.
 */
     Map(Element* e);
@@ -38,46 +38,46 @@ public:
     /**
       * @param filename The file to save to.
       * @return True on success, false on failure.
-      * Saves a map to an XML file.
+      * @brief Saves a map to an XML file.
       */
     bool SaveToXML(const std::string& filename);
 
     /**
       * @param filename The file to load from.
       * @return True on success, false on failure.
-      * Loads the map from an XML file.
+      * @brief Loads the map from an XML file.
       */
     bool LoadFromXML(const std::string& filename);
 
     /**
       * @param filename The file to Save to.
       * @return True on success, false on failure.
-      * Saves the map to a celeste compatible bin file.
+      * @brief Saves the map to a celeste compatible bin file.
       */
     bool SaveToBin(const std::string& filename);
 
     /**
       * @param filename The file to load from.
       * @return True on success, false on failure.
-      * Loads the map from a celeste compatible bin file.
+      * @brief Loads the map from a celeste compatible bin file.
       */
     bool LoadFromBin(const std::string& filename);
 
     /**
       * @param e The element to load from.
-      * Loads the map from an element.
+      * @brief Loads the map from an element.
       */
     void LoadFromElement(Element* e);
 
     /**
       * @return The new element.
-      * Constructs a new elemenent representing the map.
+      * @brief Constructs a new elemenent representing the map.
       * This element should be structured to save using binarypacker.
       */
     Element* SaveToElement(void);
 
     /**
-      * Clears the map entirely, emptying rooms, filler, and style.
+      * @brief Clears the map entirely, emptying rooms, filler, and style.
       */
     void Clear(void);
 

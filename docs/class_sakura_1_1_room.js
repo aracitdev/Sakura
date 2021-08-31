@@ -5,7 +5,7 @@ var class_sakura_1_1_room =
     [ "LoadFromElement", "class_sakura_1_1_room.html#a5b66836d9d23d34c57e530900a20e222", null ],
     [ "Resize", "class_sakura_1_1_room.html#a6ca65f106ad36c9913e480f60d21647b", null ],
     [ "Resize", "class_sakura_1_1_room.html#afbb4b61865e1b8c1d864d53f6226089e", null ],
-    [ "SaveToElement", "class_sakura_1_1_room.html#ab9c904ea4bf76dd6c38a00811cda0784", null ],
+    [ "SaveToElement", "class_sakura_1_1_room.html#ac0a4b53746dbf59409bad611746e0365", null ],
     [ "bgdecals", "class_sakura_1_1_room.html#a342839d7c2a787053bd62d3b805cbfe9", null ],
     [ "bgTiles", "class_sakura_1_1_room.html#aa9f3359a4f0f83979f0e61dc92430000", null ],
     [ "defs", "class_sakura_1_1_room.html#a449f9927653be962d256b5ace761f4dd", null ],

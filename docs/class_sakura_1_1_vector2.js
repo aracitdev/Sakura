@@ -14,7 +14,7 @@ var class_sakura_1_1_vector2 =
     [ "operator+", "class_sakura_1_1_vector2.html#aa2e67f300798f9aee3cb9072a6969ace", null ],
     [ "operator+", "class_sakura_1_1_vector2.html#aec9f6a95e29b40716819222563051dc1", null ],
     [ "operator-", "class_sakura_1_1_vector2.html#ae578798beee7e135120ad41313f0a2e8", null ],
-    [ "operator-", "class_sakura_1_1_vector2.html#a8dcb6f3dc216a95e26c62a568e1c89eb", null ],
+    [ "operator-", "class_sakura_1_1_vector2.html#aeb57d3199d5e632daa58a4e2c24503c5", null ],
     [ "operator/", "class_sakura_1_1_vector2.html#a11b4aad5baee09dc5d65c8702248abd4", null ],
     [ "operator/", "class_sakura_1_1_vector2.html#ae4381d3107b2b61d74fe6ac92a86008d", null ],
     [ "operator<", "class_sakura_1_1_vector2.html#ae97a4d533371d650d0fead8b53eb38c2", null ],

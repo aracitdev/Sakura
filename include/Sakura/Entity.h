@@ -23,7 +23,7 @@ class Element;
 
 
 /**
-  * A class for string entities and triggers.
+  * @brief A class for string entities and triggers.
   * Also has some functions for storing and saving them to elements.
   */
 class Entity
@@ -32,33 +32,33 @@ public:
 
 /**
   * @param nm The name of the entity to construct
-  * Constructs a blank entity, id =-1
+  * @brief Constructs a blank entity, id =-1
   */
     Entity(const std::string& nm="");
 
 /**
   * @param nm The name of the entity to construct
   * @param e The element to construct from
-  * Constructs a blank entity and loads from an element.
+  * @brief Constructs a blank entity and loads from an element.
   */
     Entity(const std::string& nm, Element* e);
 
 /**
   * @param e The element to load from.
-  * Constructs an entity from an element.
+  * @brief Constructs an entity from an element.
   */
     Entity(Element* e);
 
 /**
   * @param e The element to load from
-  * Loads an element's attributes (and noads if present).
+  * @brief Loads an element's attributes (and noads if present).
   * Ignores attributes starting with __ and those in the blacklist.
   */
     void LoadFromElement(Element* e);
 
 /**
   * @return A new entity that can be saved as an element.
-  * Constructs an element representing the entity.
+  * @brief Constructs an element representing the entity.
   * Only saves id if positive.
   */
     Element* SaveToElement(void);

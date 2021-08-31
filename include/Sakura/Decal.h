@@ -13,7 +13,7 @@ namespace Sakura
 {
 
 /**
-  * Represents a Celeste decal (either foreground or background).
+  * @brief Represents a Celeste decal (either foreground or background).
   * Can be loaded from an Element
   */
 class Decal
@@ -21,26 +21,26 @@ class Decal
 public:
 
 /**
-  * Creates an empty decal.
+  * @brief Creates an empty decal.
   */
     Decal();
 
 /**
   * @param e The element to load
-  * Creates an empty decal and then loads from the element
+  * @brief Creates an empty decal and then loads from the element
   */
     Decal(Element* e);
 
 /**
   * @param e
-  * Loads a decal from an element.
+  * @brief Loads a decal from an element.
   * Loads position, texture, and scale.
   */
     void LoadFromElement(Element* e);
 
 /**
   * @return The element constructed from the decal.
-  * Creates an element from a decal.
+  * @brief Creates an element from a decal.
   */
     Element* SaveToElement(void);
 

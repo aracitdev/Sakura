@@ -30,14 +30,14 @@ inline bool IsType(const std::variant<int32_t,bool,float,std::string>& in)
 /**
  * @param in The variant to convert.
  * @return A string equivalent of in.
- * Converts a variant into a string equivalent.
+ * @brief Converts a variant into a string equivalent.
  */
 std::string ToString(const std::variant<int32_t,bool,float,std::string>& in);
 
 /**
  * @param in The string to convert
  * @return An string equivalent to in.
- * Converts a string into an std::any equivalent
+ * @brief Converts a string into an std::any equivalent
  */
 std::variant<int32_t,bool,float,std::string> FromString(const std::string& in);
 
